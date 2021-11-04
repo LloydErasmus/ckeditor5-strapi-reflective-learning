@@ -1,0 +1,104 @@
+{
+  "name": "ckeditor5-build-strapi-reflective-learning",
+  "version": "1.0.1",
+  "description": "CKEditor 5 build for Strapi WYSIWYG editor replacement for Reflective Learning",
+  "private": false,
+  "keywords": [
+    "ckeditor5-build",
+    "ckeditor",
+    "ckeditor5",
+    "ckeditor 5",
+    "wysiwyg",
+    "rich text",
+    "editor",
+    "html",
+    "contentEditable",
+    "strapi"
+  ],
+  "main": "./build/ckeditor.js",
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "@ckeditor/ckeditor5-alignment": "^31.0.0",
+    "@ckeditor/ckeditor5-autoformat": "^31.0.0",
+    "@ckeditor/ckeditor5-basic-styles": "^31.0.0",
+    "@ckeditor/ckeditor5-block-quote": "^31.0.0",
+    "@ckeditor/ckeditor5-ckfinder": "^31.0.0",
+    "@ckeditor/ckeditor5-code-block": "^31.0.0",
+    "@ckeditor/ckeditor5-core": "^31.0.0",
+    "@ckeditor/ckeditor5-dev-utils": "^24.4.2",
+    "@ckeditor/ckeditor5-dev-webpack-plugin": "^24.4.2",
+    "@ckeditor/ckeditor5-easy-image": "^31.0.0",
+    "@ckeditor/ckeditor5-editor-classic": "^31.0.0",
+    "@ckeditor/ckeditor5-essentials": "^31.0.0",
+    "@ckeditor/ckeditor5-font": "^31.0.0",
+    "@ckeditor/ckeditor5-heading": "^31.0.0",
+    "@ckeditor/ckeditor5-horizontal-line": "^31.0.0",
+    "@ckeditor/ckeditor5-html-embed": "^31.0.0",
+    "@ckeditor/ckeditor5-image": "^31.0.0",
+    "@ckeditor/ckeditor5-indent": "^31.0.0",
+    "@ckeditor/ckeditor5-link": "^31.0.0",
+    "@ckeditor/ckeditor5-list": "^31.0.0",
+    "@ckeditor/ckeditor5-media-embed": "^31.0.0",
+    "@ckeditor/ckeditor5-paragraph": "^31.0.0",
+    "@ckeditor/ckeditor5-paste-from-office": "^31.0.0",
+    "@ckeditor/ckeditor5-source-editing": "^31.0.0",
+    "@ckeditor/ckeditor5-special-characters": "^31.0.0",
+    "@ckeditor/ckeditor5-table": "^31.0.0",
+    "@ckeditor/ckeditor5-theme-lark": "^31.0.0",
+    "@ckeditor/ckeditor5-typing": "^31.0.0",
+    "@gtomato/ckeditor5-strapi-upload-plugin": "^1.0.0",
+    "@wiris/mathtype-ckeditor5": "^7.27.1",
+    "eslint": "^7.32.0",
+    "eslint-config-ckeditor5": "^3.1.1",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^4.0.1",
+    "sanitize-html": "^2.5.2",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.2",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=5.7.1"
+  },
+  "author": "Reflective Learning",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://reflectivelearning.co.za",
+  "bugs": "https://reflectivelearning.co.za",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roslovets-Inc/ckeditor5-build-strapi-wysiwyg.git"
+  },
+  "scripts": {
+    "lint": "eslint --quiet \"**/*.js\"",
+    "bootstrap": "yarn install",
+    "build": "webpack --mode production",
+    "prepare": "npm run build",
+    "preversion": "npm run build",
+    "postversion": "git push && git push --tags"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --quiet"
+    ],
+    "**/*.css": [
+      "stylelint --quiet --allow-empty-input"
+    ]
+  },
+  "eslintIgnore": [
+    "build/**",
+    "coverage/**",
+    "external/**"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-remove-format": "^31.0.0"
+  }
+}
