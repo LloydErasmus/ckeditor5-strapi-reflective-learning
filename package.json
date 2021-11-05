@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-build-strapi-reflective-learning",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CKEditor 5 build for Strapi WYSIWYG editor replacement for Reflective Learning",
   "private": false,
   "keywords": [
@@ -67,10 +67,12 @@
   "author": "Reflective Learning",
   "license": "GPL-2.0-or-later",
   "homepage": "https://reflectivelearning.co.za",
-  "bugs": "https://reflectivelearning.co.za",
+  "bugs": {
+    "url": "https://reflectivelearning.co.za"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Roslovets-Inc/ckeditor5-build-strapi-wysiwyg.git"
+    "url": "git+https://github.com/Roslovets-Inc/ckeditor5-build-strapi-wysiwyg.git"
   },
   "scripts": {
     "lint": "eslint --quiet \"**/*.js\"",

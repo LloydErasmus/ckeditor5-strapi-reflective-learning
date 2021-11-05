@@ -13,8 +13,6 @@ export class StrapiMediaLib extends Plugin {
         const editor = this.editor;
         const config = editor.config.get('strapiMediaLib');
 
-        console.log('MEDIA LIB CONFIG', config);
-
         editor.ui.componentFactory.add('strapiMediaLib', locale => {
             
             const view = new ButtonView(locale);
